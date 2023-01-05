@@ -11,18 +11,18 @@ class WeightCubit extends Cubit<WeightStates> {
   void addWeight({
   required String weight,
   required String dateTime,
+  required String wid,
 
 }) {
     emit(WeightLoadingState());
-    var id =  DateTime.now().toString();
     WeightModel model = WeightModel(
       weight: weight,
-      dateTime: id,
-      id:DateTime.now().toString() ,
+      dateTime: dateTime,
+      wid:wid ,
       uId: uId,
     );
     FirebaseFirestore.instance
-        .collection('weights').doc(id)
+        .collection('weights').doc(wid)
         .set(model.toMap())
         .then((value) {
           emit(WeightSuccessState());

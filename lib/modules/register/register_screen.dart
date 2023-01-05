@@ -6,6 +6,7 @@ import 'package:taskk_app/shared/components/constants.dart';
 import '../../shared/components/components.dart';
 import '../../shared/network/local/cache_helper.dart';
 import '../get_weights/get_weights_screen.dart';
+import '../weight/weight_screen.dart';
 import 'cubit/states.dart';
 
 
@@ -36,7 +37,7 @@ class SocialRegisterScreen extends StatelessWidget {
             ).then((value)
             {
               uId=state.uId;
-              navigateAndFinish(context, GetWeightsScreen());
+              navigateAndFinish(context, WeightScreen());
             });
           }
         },
@@ -55,6 +56,7 @@ class SocialRegisterScreen extends StatelessWidget {
                         Text('REGISTER',
                           style: Theme.of(context).textTheme.bodyText2,
                         ),
+                        SizedBox(height:20.0),
                         Text('Register now to communicate with friends',
                           style: Theme.of(context).textTheme.bodyText1
                         ),

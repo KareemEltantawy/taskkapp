@@ -2,6 +2,15 @@ import 'package:flutter/material.dart';
 
 ThemeData lightTheme = ThemeData(
   appBarTheme: AppBarTheme(
+        titleTextStyle: TextStyle(
+      fontFamily: 'Jannah',
+      color: Colors.black,
+      fontSize: 20.0,
+      fontWeight: FontWeight.bold,
+    ),
+    iconTheme: IconThemeData(
+      color: Colors.black,
+    ),
     centerTitle: true,
     elevation: 0.0,
     color: Colors.white,

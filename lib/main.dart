@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taskk_app/modules/get_weights/get_weights_screen.dart';
 import 'package:taskk_app/modules/login/login_screen.dart';
 import 'package:taskk_app/shared/components/constants.dart';
+import 'modules/weight/weight_screen.dart';
 import 'shared/bloc_observer.dart';
 import 'shared/network/local/cache_helper.dart';
 import 'shared/styles/themes.dart';
@@ -19,7 +20,7 @@ void main() async
   uId = CacheHelper.getData(key: 'uId');
 Widget widget;
 if(uId!=null){
-  widget=GetWeightsScreen();
+  widget=WeightScreen();
 }else{
   widget=LoginScreen();
 }

@@ -17,7 +17,7 @@ class UpdateYourWeightCubit extends Cubit<UpdateYourWeightStates> {
     WeightModel model = WeightModel(
       weight: weight,
       dateTime: DateTime.now().toString(),
-      id: id,
+      wid: id,
       uId: uId,
     );
     FirebaseFirestore.instance

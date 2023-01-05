@@ -2,20 +2,20 @@ class WeightModel{
   String? weight;
   String? dateTime;
   String? uId;
-  String? id;
+  String? wid;
 
   WeightModel({
     this.weight,
     this.dateTime,
     this.uId,
-    this.id
+    this.wid
 });
 
   WeightModel.fromJson(Map<String,dynamic> json){
     weight= json['weight'];
     dateTime= json['dateTime'];
     uId= json['uId'];
-    uId= json['id'];
+    wid= json['wid'];
   }
 
   Map<String,dynamic> toMap(){
@@ -23,7 +23,7 @@ class WeightModel{
       'weight' : weight,
       'dateTime' : dateTime,
       'uId' : uId,
-      'uId' : id,
+      'wid' : wid,
     };
   }
 }

@@ -2,7 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taskk_app/models/weight_model.dart';
 import 'package:taskk_app/modules/get_weights/cubit/states.dart';
-import 'package:taskk_app/shared/components/constants.dart';
+
+import '../../../shared/components/constants.dart';
 
 class GetWeightsCubit extends Cubit<GetWeightsStates> {
   GetWeightsCubit() : super(GetWeightsInitialStates());
