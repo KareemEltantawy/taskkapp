@@ -4,10 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taskk_app/models/weight_model.dart';
 import 'package:taskk_app/modules/get_weights/cubit/cubit.dart';
 import 'package:taskk_app/modules/get_weights/cubit/states.dart';
-import 'package:taskk_app/modules/get_weights/weight_component.dart';
 import 'package:taskk_app/modules/update_your_weight/cubit/cubit.dart';
-import 'package:taskk_app/modules/weight/cubit/cubit.dart';
-import 'package:taskk_app/modules/weight/cubit/states.dart';
 import 'package:taskk_app/shared/components/components.dart';
 
 class UpdateWeightsScreen extends StatelessWidget {
@@ -49,9 +46,7 @@ class UpdateWeightsScreen extends StatelessWidget {
                   defaultButton(function: (){
                     if(formKey.currentState!.validate()){
                       UpdateYourWeightCubit.get(context).updateWeight(weight: updatedweight.text, id: weight.id!, uId: weight.uId!);
-
                     }
-
                   }, text: 'Update')
                 ],),
               ),
